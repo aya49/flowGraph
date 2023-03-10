@@ -2,8 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.1101/837765.svg)](https://doi.org/10.1101/837765)
 
-[Summary blog post](https://aya49.github.io/2020/09/30/flowGraph/)
-
 flowGraph is an R package used to identify candidate biomarkers for disease diagnosis in flow cytometry data. It does so by identifying driver cell populations whose abundance changes significantly and independently given a disease.
 
 flowGraph takes cell counts as input and outputs SpecEnr values for each cell population within a flow cytometry sample, based on their expected proportion. SpecEnr accounts for dependencies between cell populations such that we can use it to flag only cell populations whose abundance change is incurred wholly or in part because of its association with a sample class (e.g. healthy vs sick).
