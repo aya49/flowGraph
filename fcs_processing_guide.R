@@ -4,7 +4,6 @@ BiocManager::install("flowCore")
 BiocManager::install("flowWorkspace")
 BiocManager::install("PeacoQC")
 BiocManager::install("flowDensity")
-devtools::install_url("https://www.bioconductor.org/packages/3.8/bioc/src/contrib/flowType_2.20.1.tar.gz")
 BiocManager::install("aya49/flowGraph")
 
 # load packages
