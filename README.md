@@ -44,7 +44,7 @@ This package has been tested on R version 3.5+. If you have R version 3.5 - 4.0,
 
 See our [vignette](vignettes/flowGraph.Rmd) for different use cases of the package: generating features, calculating summary statistics, visualizing results, and data specific use cases.
 
-flowGraph takes as input a (sample x cell population) raw cell count matrix.
+flowGraph takes as input a (sample x cell population) raw cell count matrix. See and example of how to obtain this matrix for one file (one row) [here](https://github.com/aya49/flowGraph/fcs_processing_guide.R)
 
 flowGraph gives as output a flowGraph object that contains the SpecEnr abundance statistic and optionally its q-values. The flowGraph object can then be used to calculate more statistics, plot and visualize q-values on a cell hierarchy, etc.
 
