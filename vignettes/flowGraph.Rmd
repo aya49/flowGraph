@@ -142,12 +142,28 @@ fg <- flowGraph(
     no_cores=no_cores) # number of cores to use, typically 1 for small data
 ```
 
-The flowGraph output can be loaded into R from the specified directory as 
-a flowGraph object `fg`. 
+Click [here](https://github.com/aya49/flowGraph/fcs_processing_guide.R) for a script with an example of how to get
+`fg_data_pos2$count` starting from a raw .fcs file. 
+Since this is only for one file, the result is only one row 
+in the sample x cell population matrix. 
+One will need to `rbind()` many of these rows from many 
+.fcs files to create a sample x cell population matrix.
+One will also need to create a meta data matrix containing at least the class or category of each file (e.g. control vs experiment).
+
+The flowGraph object can be loaded into R from the specified directory:
 
 ```{r, eval=FALSE}
 fg <- fg_load("flowGraph_example")
 ```
+
+The `fg_data_pos2$count` argument can be generated manually, 
+or it can be created using the flowType package given a preprocessed .fcs file. The preprocessing should consist of: compensated/unmixing (flow/spectral), transformation, and cleaning. 
+Preferrably, all non-single cells have been gated and removed from the file. For example:
+
+```{r, eval=FALSE}
+fg_save(fg, folder_path="flowGraph_example")
+```
+
 
 This flowGraph object can be further analyzed and
 modified by using methods described in the following sections.
